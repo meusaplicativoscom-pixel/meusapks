@@ -16,59 +16,98 @@ body {
 .container {
     max-width: 1200px;
     margin: auto;
-    padding: 30px;
+    padding: 20px;
 }
 
 h1 {
     text-align: center;
 }
 
+/* LISTA */
 .app-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
+/* ITEM */
 .app-item {
     display: flex;
     align-items: center;
     background: #222;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     transition: 0.2s;
     outline: none;
 }
 
+/* FOCO (TV) */
 .app-item:focus {
     border: 3px solid #4CAF50;
     background: #333;
     transform: scale(1.03);
 }
 
+/* IMAGEM */
 .app-image {
-    width: 120px;
+    width: 80px;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
-.app-description {
-    flex: 1;
-}
-
+/* TEXTO */
 .app-name {
-    font-size: 22px;
+    font-size: 18px;
     color: #4CAF50;
 }
 
+/* BOTÃO */
 a {
     background-color: #4CAF50;
     color: white;
-    padding: 15px 25px;
-    border-radius: 8px;
+    padding: 10px 15px;
+    border-radius: 6px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 14px;
 }
 
+/* 📱 MODO CELULAR */
+@media (max-width: 600px) {
+    .app-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-image {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    a {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* 📺 MODO TV */
+@media (min-width: 900px) {
+    .app-item {
+        padding: 25px;
+    }
+
+    .app-image {
+        width: 120px;
+    }
+
+    .app-name {
+        font-size: 22px;
+    }
+
+    a {
+        font-size: 18px;
+        padding: 15px 25px;
+    }
+}
 </style>
 </head>
 
