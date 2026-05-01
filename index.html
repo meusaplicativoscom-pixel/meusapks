@@ -3,134 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Baixar APKs</title>
-<link rel="manifest" href="./manifest.json">
-<meta name="theme-color" content="#000000">
+<title>Baixar APKs TV</title>
+
 <style>
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-    background-color: #f5f5f5;
+    background-color: #111;
+    color: white;
+    margin: 0;
 }
+
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
 }
+
 h1 {
-    color: #333;
+    text-align: center;
 }
+
 .app-list {
-    text-align: left;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
 .app-item {
-    margin: 15px 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.2s;
+    outline: none;
 }
+
+.app-item:focus {
+    border: 3px solid #4CAF50;
+    background: #333;
+    transform: scale(1.03);
+}
+
 .app-image {
-    max-width: 80px;
+    width: 120px;
+    border-radius: 10px;
     margin-right: 20px;
-    border-radius: 8px;
 }
+
+.app-description {
+    flex: 1;
+}
+
 .app-name {
-    font-weight: bold;
+    font-size: 22px;
     color: #4CAF50;
 }
-.app-description {
-    flex-grow: 1;
-}
+
 a {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
+    font-size: 18px;
 }
-a:hover {
-    background-color: #45a049;
-}
+
 </style>
 </head>
+
 <body>
 
 <div class="container">
-    <h1>APKs do Baixar</h1>
-    <p>Escolha o aplicativo que você deseja baixar:</p>
+    <h1>APKs para TV</h1>
 
     <div class="app-list">
-        <!-- Aplicativo 1 -->
-        <div class="app-item">
-            <img src="https://play-lh.googleusercontent.com/pvGdA_fFqMNDDZ2hef1_qK0VapDKMrmidKrYcD0OmLfcKcMwM_yOGlLajjVx2tzXf_Q=w600-h300-pc0xffffff-pd" alt="Ícone do Aplicativo 1" class="app-image">
+
+        <div class="app-item" tabindex="0">
+            <img src="https://play-lh.googleusercontent.com/pvGdA_fFqMNDDZ2hef1_qK0VapDKMrmidKrYcD0OmLfcKcMwM_yOGlLajjVx2tzXf_Q=w600-h300-pc0xffffff-pd" class="app-image">
             <div class="app-description">
-                <p class="app-name">Aplicativo 1</p>
-                <p>IBO RREVENDA</p>
+                <div class="app-name">IBO REVENDA</div>
             </div>
-            <a href="https://www.mediafire.com/file/wg4f86cdtfv75pf/IBO_REVENDA_5.0_APKPure.apk" download>Baixar APK - Aplicativo 1</a>
+            <a href="https://www.mediafire.com/file/wg4f86cdtfv75pf/IBO_REVENDA_5.0_APKPure.apk">Baixar</a>
         </div>
-        <!-- Aplicativo 2 -->
-        <div class="app-item">
-            <img src="https://play-lh.googleusercontent.com/abnuAt-l3UKjwafZESFM-qVLVq-BHDwWUVX91OeuM5bJTPRlfyrj18bptDnkt_7ZhqsZ=w600-h300-pc0xffffff-pd" alt="Ícone do Aplicativo 2" class="app-image">
+
+        <div class="app-item" tabindex="0">
+            <img src="https://play-lh.googleusercontent.com/abnuAt-l3UKjwafZESFM-qVLVq-BHDwWUVX91OeuM5bJTPRlfyrj18bptDnkt_7ZhqsZ=w600-h300-pc0xffffff-pd" class="app-image">
             <div class="app-description">
-                <p class="app-name">Aplicativo 2</p>
-                <p>IBO SHAMEL</p>
+                <div class="app-name">IBO SHAMEL</div>
             </div>
-            <a href="https://www.mediafire.com/file/af9wym9ukcgu0gv/shamel_%25281%2529.apk" download>Baixar APK - Aplicativo 2</a>
+            <a href="https://www.mediafire.com/file/af9wym9ukcgu0gv/shamel_%25281%2529.apk">Baixar</a>
         </div>
-        <!-- Aplicativo 3 -->
-        <div class="app-item">
-            <img src="https://apps.paineltbf.com.br/logo.png" alt="Ícone do Aplicativo 3" class="app-image">
+
+        <div class="app-item" tabindex="0">
+            <img src="https://apps.paineltbf.com.br/logo.png" class="app-image">
             <div class="app-description">
-                <p class="app-name">Aplicativo 3</p>
-                <p>TURBO FLIX</p>
+                <div class="app-name">TURBO FLIX</div>
             </div>
-            <a href="https://www.mediafire.com/file/sxksoli8gv6gzr1/turboflixibo.apk/file" download>Baixar APK - Aplicativo 3</a>
+            <a href="https://www.mediafire.com/file/sxksoli8gv6gzr1/turboflixibo.apk/file">Baixar</a>
         </div>
-<!-- Aplicativo 4 -->
-        <div class="app-item">
-            <img src="https://smarttubeapp.net/wp-content/uploads/2025/09/SmartTube-icon.webp" alt="Ícone do Aplicativo 4" class="app-image">
+
+        <div class="app-item" tabindex="0">
+            <img src="https://smarttubeapp.net/wp-content/uploads/2025/09/SmartTube-icon.webp" class="app-image">
             <div class="app-description">
-                <p class="app-name">Aplicativo 4</p>
-                <p>SmarTube</p>
+                <div class="app-name">SmartTube</div>
             </div>
-            <a href="https://www.mediafire.com/file/2x6hwxoe56atx8k/SmartTube_beta_30.68_armeabi-v7a%25281%2529.apk" download>Baixar APK - Aplicativo 3</a>
+            <a href="https://www.mediafire.com/file/2x6hwxoe56atx8k/SmartTube_beta_30.68_armeabi-v7a%25281%2529.apk">Baixar</a>
         </div>
+
+        <div class="app-item" tabindex="0">
+            <img src="https://a.imagem.app/BMDFCC.jpeg" class="app-image">
+            <div class="app-description">
+                <div class="app-name">Uni Revenda</div>
+            </div>
+            <a href="https://www.mediafire.com/file/iyipuxtdo5ium4x/UniRevenda.apk/file">Baixar</a>
+        </div>
+
     </div>
 </div>
 
 <script>
-let deferredPrompt;
-const btnInstall = document.getElementById("btnInstall");
+// Navegação com controle remoto (teclado)
+const items = document.querySelectorAll('.app-item');
 
-window.addEventListener("beforeinstallprompt", (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    btnInstall.style.display = "block"; // mostra o botão
-});
+let current = 0;
+items[current].focus();
 
-btnInstall.addEventListener("click", async () => {
-    if (deferredPrompt) {
-        deferredPrompt.prompt();
-        const { outcome } = await deferredPrompt.userChoice;
-        console.log("Resultado da instalação:", outcome);
-        deferredPrompt = null;
-        btnInstall.style.display = "none";
+document.addEventListener('keydown', (e) => {
+    if (e.key === "ArrowDown") {
+        current = (current + 1) % items.length;
+        items[current].focus();
+    }
+    if (e.key === "ArrowUp") {
+        current = (current - 1 + items.length) % items.length;
+        items[current].focus();
     }
 });
-
-// Registrar Service Worker
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js')
-    .then(() => console.log('Service Worker registrado!'))
-    .catch((err) => console.log('Falha ao registrar SW:', err));
-}
 </script>
 
 </body>
