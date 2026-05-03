@@ -149,7 +149,13 @@ a {
             </div>
             <a href="https://www.mediafire.com/file/2x6hwxoe56atx8k/SmartTube_beta_30.68_armeabi-v7a%25281%2529.apk">Baixar</a>
         </div>
-
+        <div class="app-item" tabindex="0">
+            <img src="https://www.tvbox.one/wp-content/uploads/2020/10/app_banner.jpg" class="app-image">
+            <div class="app-description">
+                <div class="app-name">SmartTube</div>
+            </div>
+            <a href="https://www.mediafire.com/file/28qs8bm1pi6agnv/SmartTube_stable_31.57_universal.apk/file">Baixar</a>
+        </div>
         <div class="app-item" tabindex="0">
             <img src="https://a.imagem.app/BMDFCC.jpeg" class="app-image">
             <div class="app-description">
@@ -162,23 +168,60 @@ a {
 </div>
 
 <script>
-// Navegação com controle remoto (teclado)
 const items = document.querySelectorAll('.app-item');
 
 let current = 0;
-items[current].focus();
 
+// Função para atualizar foco
+function updateFocus() {
+    items[current].focus();
+}
+
+// Foco inicial
+updateFocus();
+
+// Evento de teclado
 document.addEventListener('keydown', (e) => {
-    if (e.key === "ArrowDown") {
-        current = (current + 1) % items.length;
-        items[current].focus();
+    switch (e.key) {
+
+        case "ArrowDown":
+            e.preventDefault();
+            current = (current + 1) % items.length;
+            updateFocus();
+            break;
+
+        case "ArrowUp":
+            e.preventDefault();
+            current = (current - 1 + items.length) % items.length;
+            updateFocus();
+            break;
+
+        case "Enter":
+            e.preventDefault();
+            const link = items[current].querySelector('a');
+            if (link) {
+                link.click();
+            }
+            break;
     }
-    if (e.key === "ArrowUp") {
-        current = (current - 1 + items.length) % items.length;
-        items[current].focus();
-    }
+});
+
+// Permitir clicar no card inteiro
+items.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        const link = item.querySelector('a');
+        if (link) {
+            link.click();
+        }
+    });
+
+    // Atualiza índice ao focar manualmente
+    item.addEventListener('focus', () => {
+        current = index;
+    });
 });
 </script>
 
 </body>
 </html>
+  
